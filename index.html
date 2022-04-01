@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Image Parser</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-image">
+        <div class="container">
+            <h1><strong>Image Parser</strong></h1>
+            <h3>Enter any URL and get all the images on the page</h3>
+            <button type="button" class="action-buttons" data-toggle="modal" data-target="#aboutmodal">About</button>
+            <a href="./api/image-parser.php?url=www.google.com" target="_blank"><button class="action-buttons">Get API</button></a>
+        </div>
+    </header>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form id="form-extractor" class="form-horizontal form-main" method="GET">
+                    <input type="text" class="form-control" name="url" placeholder="Enter the URL from where images are to be extracted" required autofocus>
+                    <br>
+                    <button type="button" id="submit" class="btn btn-lg btn-success">Extract</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="spinner" style="display:none;">
+      <div class="rect1"></div> <div class="rect2"></div> <div class="rect3"></div> <div class="rect4"></div> <div class="rect5"></div>
+    </div>
+    <div id="stats" class="container" style="display:none;">
+        <div class="row">
+          <div class="col-xs-12 text-center" id="download-file" >
+              <a class="btn btn-lg btn-info" target="_blank" href="#">Download zip file</a>
+          </div> 
+        </div>
+    </div>
+		<div id="result" class="other-text">Welcome :)</div>
+</div>
+
+<div class="modal fade" id="aboutmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Image-Parser</h4>
+            </div>
+            <div class="modal-body text-justify">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
